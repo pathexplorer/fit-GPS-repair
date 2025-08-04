@@ -8,7 +8,8 @@ Steps:
 1. Go to https://developer.garmin.com/fit/download/
 2. Download FitSDKRelease.zip and unzip it
 3. Go to /java directory and copy there your .fit file
-4. Convert from .fit to .csv
+4. Rename it to <code>input.fit</code>
+5. Convert from .fit to .csv
 <br><code>java -jar FitCSVTool.jar -b input.fit output.csv</code>
 6. After fix data by python script, convert to .fit
 <br><code>java -jar FitCSVTool.jar -c cleaned.csv ready.fit</code>
