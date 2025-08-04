@@ -23,4 +23,4 @@ def clean_lat_fragment(input_path, output_path):
         outfile.writelines(cleaned_lines)
 
 # Використання:
-clean_lat_fragment("source.csv", "cleaned.csv")
+clean_lat_fragment("output.csv", "cleaned.csv")
