@@ -1,22 +1,26 @@
 # fit-GPS-repair
-Prepositon:
-- you have bike computer (wow!) 
-- you have speed sensor (bluetooth or wired)
-- DISABLE auto-pause at your device
+<b>Preposition:</b>
+- You have a bike computer (wow!) 
+- You have a speed sensor
+- Installed Python 3  
 
-Steps:
+<b>Steps:</b>
 1. Go to https://developer.garmin.com/fit/download/
 2. Download FitSDKRelease.zip and unzip it
-3. Go to /java directory and copy there your .fit file
+3. Go to /java directory and copy your .fit file
 4. Rename it to <code>input.fit</code>
-5. Convert from .fit to .csv
+5. Convert from .fit to .csv 
 <br><code>java -jar FitCSVTool.jar -b input.fit output.csv</code>
-6. After fix data by python script, convert to .fit
+6. Run python script 
+<br><code>python3 clean.py</code>
+7. After the Python script fixes the data, convert to .fit
 <br><code>java -jar FitCSVTool.jar -c cleaned.csv ready.fit</code>
 
-Troubleshooting:
+<b>Troubleshooting:</b>
 When the speed sensor is available, the bike computer gives it priority over GPS speed data.
-However, when the sensor doesn't detect movement (e.g. the rider is stopped), it temporarily shuts down.
-But the GPS signal is chaotic at that moment, and the bike computer switches back to GPS and show incorrect speed data.
+If the sensor doesn’t detect movement (e.g., when the rider stops), it temporarily shuts down.
+At that point, the bike computer switches back to unstable GPS, which may result in incorrect speed readings.
+<b>Solution:</b> During periods of GPS instability, always use the Pause button on your bike computer. This prevents false speed “noise” from being recorded in the log.
 
-Solution: Disable the auto-start function
+<b>Why we need FIT conversion</b>
+FIT format saves speed data from the speed sensor in a separate field, but conversion to GPX by Strava is deleting this data.
