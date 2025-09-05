@@ -4,8 +4,8 @@
 - You have a speed sensor
 - Installed Python 3
   
-<b>Main idea of code</b>
-During the period of GPS issues, the sports device log jumps to the other side of our planet. 
+<b>Main idea of code:</b>
+<br>During the period of GPS issues, the sports device log jumps to the other side of our planet. 
 Splitting these fragments and deleting damaged sections is a good idea, but it doesn't save any other data, such as pulse, cadence, power, and distance.
 So, use smart delete - any GPS data with a negative value must be excluded, and save other data at the same time.
 
