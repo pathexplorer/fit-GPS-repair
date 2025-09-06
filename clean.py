@@ -3,7 +3,7 @@ import re
 def clean_lat_fragment(input_path, output_path):
     # Шукає фрагмент з lat, long та gps_accuracy
     pattern = re.compile(
-        r'position_lat,"(-?\d+)",semicircles,position_long,"-?\d+",semicircles,gps_accuracy,"-?\d+",m,'
+        r'position_lat,"(-?\d+)",semicircles,position_long,"-?\d+",semicircles,'
     )
 
     with open(input_path, 'r', encoding='utf-8') as infile:
