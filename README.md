@@ -1,5 +1,4 @@
 # fit-GPS-repair
-Version 0.2 20250906
 <b>Preposition:</b>
 - You have a bike computer (wow!) 
 - You have a speed sensor
