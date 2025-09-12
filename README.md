@@ -17,7 +17,8 @@ So, use smart delete - any GPS data with a negative value must be excluded, and 
 4. Rename it to <code>input.fit</code>
 5. Convert from .fit to .csv 
 <br><code>java -jar FitCSVTool.jar -b input.fit output.csv</code>
-6. Run Python script 
+6. Run Python script
+<br>Move clean.py in the /java folder and run it
 - Linux:<br><code>python3 clean.py</code>
 - Windows:<br><code>py clean.py</code>
 7. After the Python script fixes the data, convert to .fit
